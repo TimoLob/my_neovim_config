@@ -24,7 +24,6 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -49,3 +48,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Ctrl + s to save
+vim.keymap.set('i', '<C-s>', '<ESC><cmd>w<CR>', { desc = 'Ctrl + S to save current buffer.', silent = true })
+vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Ctrl + S to save current buffer.', silent = true })
+
+-- Window movement using Ctrl + Arrow keys
+vim.keymap.set('n', '<C-LEFT>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-RIGHT>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-DOWN>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-UP>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })

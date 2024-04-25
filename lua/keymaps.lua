@@ -58,3 +58,6 @@ vim.keymap.set('n', '<C-LEFT>', '<C-w><C-h>', { desc = 'Move focus to the left w
 vim.keymap.set('n', '<C-RIGHT>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-DOWN>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-UP>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('i', '<S-Tab>', '<ESC><<i', { desc = 'unindent', silent = true })
+vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'unindent', silent = true })
